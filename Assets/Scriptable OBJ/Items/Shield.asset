@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae08fdec16d9d348826a1daf8a104c7, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8694462533621648383, guid: 0ed429588ca0d664db6e251533d53a70, type: 3}
+  Id: 1
+  uiDisplay: {fileID: -127988764, guid: 8985579780c501445821872d604a95c8, type: 3}
   type: 1
   description: Its heavy but at least it will keep you safe
   atkBonus: 0

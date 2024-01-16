@@ -7,16 +7,16 @@ using UnityEngine;
 public class ItemDataBase : ScriptableObject, ISerializationCallbackReceiver
 {
     public ItemObj[] Items;
-    public Dictionary<ItemObj ,int> GetID = new Dictionary<ItemObj, int>() ;
+    
     public Dictionary<int, ItemObj> GetItem = new Dictionary<int, ItemObj>();
 
     public void OnAfterDeserialize()
     {
-        GetID = new Dictionary<ItemObj, int>();
-        GetItem = new Dictionary<int, ItemObj>();
+        
+        
         for (int i = 0; i < Items.Length; i++)
         {
-            GetID.Add(Items[i], i);
+            Items[i].Id = i;
             GetItem.Add(i, Items[i]);
 
         }
@@ -24,6 +24,6 @@ public class ItemDataBase : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnBeforeSerialize()
     {
-        
+        GetItem = new Dictionary<int, ItemObj>();
     }
 }

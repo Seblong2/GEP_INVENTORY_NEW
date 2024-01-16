@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1558738e88cf83419fc197de6aa657b, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  prefab: {fileID: 425483502753263696, guid: 88743516e05b82b4689ca6ec146f209c, type: 3}
+  Id: 2
+  uiDisplay: {fileID: -653511411, guid: 8985579780c501445821872d604a95c8, type: 3}
   type: 0
   description: Smells bad but tastes great!
   restoreHealthValue: 15

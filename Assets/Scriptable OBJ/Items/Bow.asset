@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae08fdec16d9d348826a1daf8a104c7, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5167258321064150968, guid: a60a60f8fd0b2f64dac3dabd8192cb39, type: 3}
+  Id: 3
+  uiDisplay: {fileID: -873237236, guid: 8985579780c501445821872d604a95c8, type: 3}
   type: 1
   description: Pew pew pew
   atkBonus: 5

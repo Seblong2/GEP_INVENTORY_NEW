@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ce0ad7f47ed448ba406cd3f3bdb44, type: 3}
   m_Name: Bones
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8376619148866170255, guid: dbdf22a37ad04ee47ba5bced595fe9b8, type: 3}
+  Id: 0
+  uiDisplay: {fileID: -1649796850, guid: 8985579780c501445821872d604a95c8, type: 3}
   type: 2
   description: 'Ew Creepy
 

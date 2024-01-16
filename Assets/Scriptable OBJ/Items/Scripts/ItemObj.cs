@@ -17,6 +17,18 @@ public abstract class ItemObj : ScriptableObject
     public string description;
 }
 
+[System.Serializable]
+public class Item
+{
+    public string name;
+    public int Id;
+    public Item(ItemObj item)
+    {
+        name = item.name;
+        Id = item.Id;
+    }
+}
+
 
 
 
