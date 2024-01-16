@@ -19,6 +19,12 @@ public class InventoryObj : ScriptableObject
     public void AddItem(Item _item, int _amount)
     {
 
+        if(_item.buffs.Length > 0)
+        {
+            Container.Items.Add(new InventorySlot(_item.Id, _item, _amount));
+            return;
+        }
+
         for (int i = 0; i < Container.Items.Count; i++)
         {
             if (Container.Items[i].item.Id == _item.Id)
@@ -33,12 +39,16 @@ public class InventoryObj : ScriptableObject
     [ContextMenu("Save")]
     public void Save()
     {
+        //EDITABLE BY PLAYER SAVE FILE
+
         /*  string saveData = JsonUtility.ToJson(this, true);
           BinaryFormatter bf = new BinaryFormatter();
           FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
           bf.Serialize(file, saveData);
           file.Close();
   */
+
+        //NON - EDITABLE BY PLAYER SAVE FILE
         IFormatter formatter = new BinaryFormatter();
         Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Create, FileAccess.Write);
         formatter.Serialize(stream, Container);
@@ -50,12 +60,14 @@ public class InventoryObj : ScriptableObject
     {
         if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {
+            //EDITABLE BY PLAYER LOAD FILE
+
             /*BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
             JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
             file.Close();*/
 
-
+            //NON - EDITABLE BY PLAYER LOAD FILE
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Open, FileAccess.Read);
             Container = (Inventory)formatter.Deserialize(stream);

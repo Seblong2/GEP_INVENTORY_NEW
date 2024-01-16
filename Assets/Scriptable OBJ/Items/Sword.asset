@@ -16,5 +16,16 @@ MonoBehaviour:
   uiDisplay: {fileID: 2005930168, guid: 8985579780c501445821872d604a95c8, type: 3}
   type: 1
   description: Sharp and shiny!
-  atkBonus: 10
-  defenceBonus: 0
+  buffs:
+  - attribute: 0
+    value: 0
+    min: 10
+    max: 20
+  - attribute: 2
+    value: 0
+    min: 10
+    max: 20
+  - attribute: 3
+    value: 0
+    min: 5
+    max: 50
