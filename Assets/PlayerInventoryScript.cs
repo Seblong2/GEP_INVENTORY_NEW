@@ -18,9 +18,10 @@ public class PlayerInventoryScript : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Q))
         {
             inventory.Save();
+
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -31,6 +32,6 @@ public class PlayerInventoryScript : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-       inventory.Container.Items.Clear();
+        inventory.Container.Items = new InventorySlot[24];
     }
 }
